@@ -1,4 +1,4 @@
--- Deploy evercast_local:jwt to pg
+-- Deploy rpg_local:jwt to pg
 -- requires: schema_account
 -- requires: extension_uuidOssp
 

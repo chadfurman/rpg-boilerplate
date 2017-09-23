@@ -1,4 +1,4 @@
--- Deploy evercast_local:table_credentials_triggers to pg
+-- Deploy rpg_local:table_credentials_triggers to pg
 -- requires trigger_setUpdatedAt
 -- requires table_credentials
 

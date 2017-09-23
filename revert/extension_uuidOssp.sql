@@ -1,4 +1,4 @@
--- Revert evercast:extension_uuidOssp from pg
+-- Revert rpg:extension_uuidOssp from pg
 
 BEGIN;
 

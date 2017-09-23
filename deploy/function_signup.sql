@@ -1,4 +1,4 @@
--- Deploy evercast_local:function_signup to pg
+-- Deploy rpg_local:function_signup to pg
 -- requires: table_credentials
 -- requires: extension_pgcrypto
 
@@ -22,6 +22,6 @@ end;
 $$;
 
 COMMENT ON FUNCTION account.signup(display_name text, email text, password text) IS 'Registers a single user account with profile and credentials. Display name is limited to 80 chars.  Password will be hashed and stored.  Email will be checked against a basic regex.';
-GRANT EXECUTE ON FUNCTION account.signup(display_name text, email text, password text) TO evercast_anonymous;
+GRANT EXECUTE ON FUNCTION account.signup(display_name text, email text, password text) TO rpg_anonymous;
 
 COMMIT;

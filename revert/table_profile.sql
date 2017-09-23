@@ -1,4 +1,4 @@
--- Revert evercast_local:profile from pg
+-- Revert rpg_local:profile from pg
 
 BEGIN;
 

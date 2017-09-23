@@ -1,4 +1,4 @@
--- Verify evercast:schema_account on pg
+-- Verify rpg:schema_account on pg
 
 BEGIN;
 

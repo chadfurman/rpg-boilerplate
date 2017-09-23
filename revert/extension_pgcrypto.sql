@@ -1,4 +1,4 @@
--- Revert evercast:extension_pgcrypto from pg
+-- Revert rpg:extension_pgcrypto from pg
 
 BEGIN;
 

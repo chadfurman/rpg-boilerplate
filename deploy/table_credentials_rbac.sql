@@ -1,4 +1,4 @@
--- Deploy evercast_local:table_credentials_rbac to pg
+-- Deploy rpg_local:table_credentials_rbac to pg
 -- requires table_credentials
 
 BEGIN;

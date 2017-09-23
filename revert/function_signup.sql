@@ -1,4 +1,4 @@
--- Deploy evercast_local:create_account to pg
+-- Deploy rpg_local:create_account to pg
 
 BEGIN;
 
@@ -23,6 +23,6 @@ $$;
 
 COMMENT ON FUNCTION account.create_account(display_name text, email text, password text) IS 'Registers a single user account with profile and credentials. Display name is limited to 80 chars.  Password will be hashed and stored.  Email will be checked against a basic regex.';
 
-GRANT EXECUTE ON FUNCTION account.create_account(display_name text, email text, password text) TO evercast_anonymous;
+GRANT EXECUTE ON FUNCTION account.create_account(display_name text, email text, password text) TO rpg_anonymous;
 
 COMMIT;

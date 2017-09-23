@@ -1,4 +1,4 @@
--- Deploy evercast_local:table_profile to pg
+-- Deploy rpg_local:table_profile to pg
 -- requires: schema_account
 
 BEGIN;

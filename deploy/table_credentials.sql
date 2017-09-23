@@ -1,4 +1,4 @@
--- Deploy evercast_local:table_credentials to pg
+-- Deploy rpg_local:table_credentials to pg
 -- requires table_profile
 
 BEGIN;

@@ -1,4 +1,4 @@
--- Verify evercast:table_credentials on pg
+-- Verify rpg:table_credentials on pg
 
 BEGIN;
 

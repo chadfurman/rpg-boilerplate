@@ -1,4 +1,4 @@
--- Verify evercast:permissions_roles on pg
+-- Verify rpg:permissions_roles on pg
 
 BEGIN;
 

@@ -1,4 +1,4 @@
--- Verify evercast:trigger_setUpdatedAt on pg
+-- Verify rpg:trigger_setUpdatedAt on pg
 
 BEGIN;
 

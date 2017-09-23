@@ -1,4 +1,4 @@
--- Revert evercast:table_credentials_rls from pg
+-- Revert rpg:table_credentials_rls from pg
 
 BEGIN;
 

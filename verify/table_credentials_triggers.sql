@@ -1,4 +1,4 @@
--- Verify evercast:table_credentials_triggers on pg
+-- Verify rpg:table_credentials_triggers on pg
 
 BEGIN;
 

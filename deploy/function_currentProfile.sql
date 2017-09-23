@@ -1,4 +1,4 @@
--- Deploy evercast_local:function_currentProfile to pg
+-- Deploy rpg_local:function_currentProfile to pg
 -- requires: table_profile
 
 BEGIN;
@@ -10,7 +10,7 @@ $$ LANGUAGE sql STABLE;
 
 COMMENT ON FUNCTION account.current_profile() IS 'Returns the profile of the currently logged-in account.';
 
-GRANT EXECUTE ON FUNCTION account.current_profile() TO evercast_anonymous, evercast_account;
-GRANT EXECUTE ON FUNCTION account.current_profile() TO evercast_anonymous, evercast_account;
+GRANT EXECUTE ON FUNCTION account.current_profile() TO rpg_anonymous, rpg_account;
+GRANT EXECUTE ON FUNCTION account.current_profile() TO rpg_anonymous, rpg_account;
 
 COMMIT;

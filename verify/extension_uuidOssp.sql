@@ -1,4 +1,4 @@
--- Verify evercast:extension_uuidOssp on pg
+-- Verify rpg:extension_uuidOssp on pg
 
 BEGIN;
 

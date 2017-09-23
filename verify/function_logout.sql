@@ -1,4 +1,4 @@
--- Verify evercast:function_logout on pg
+-- Verify rpg:function_logout on pg
 
 BEGIN;
 

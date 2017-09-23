@@ -1,4 +1,4 @@
--- Verify evercast:function_authenticate on pg
+-- Verify rpg:function_authenticate on pg
 
 BEGIN;
 

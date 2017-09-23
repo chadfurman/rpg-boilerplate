@@ -1,4 +1,4 @@
--- Revert evercast:function_currentProfile from pg
+-- Revert rpg:function_currentProfile from pg
 
 BEGIN;
 

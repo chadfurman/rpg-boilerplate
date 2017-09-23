@@ -1,4 +1,4 @@
--- Revert evercast_local:trigger_setUpdatedAt from pg
+-- Revert rpg_local:trigger_setUpdatedAt from pg
 
 BEGIN;
 

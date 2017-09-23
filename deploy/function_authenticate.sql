@@ -1,4 +1,4 @@
--- Deploy evercast_local:function_authenticate to pg
+-- Deploy rpg_local:function_authenticate to pg
 -- requires: type_jwt
 -- requires: table_credentials
 -- requires: extension_pgcrypto
@@ -21,11 +21,11 @@ begin
     return null;
   end if;
 
-  return ('evercast_account', credentials.profile_id)::account.jwt;
+  return ('rpg_account', credentials.profile_id)::account.jwt;
 end;
 $$;
 COMMENT ON FUNCTION account.authenticate(email text, password text) IS 'The authentication method takes two paramenters -- an email address and a password -- and returns a JWT if successful or otherwise returns an error';
 REVOKE ALL ON FUNCTION account.authenticate(email text, password text) FROM PUBLIC;
-GRANT EXECUTE ON FUNCTION account.authenticate(email text, password text) TO evercast_anonymous;
+GRANT EXECUTE ON FUNCTION account.authenticate(email text, password text) TO rpg_anonymous;
 
 COMMIT;

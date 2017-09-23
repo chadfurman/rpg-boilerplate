@@ -1,4 +1,4 @@
--- Verify evercast:permissions_revokeExecute on pg
+-- Verify rpg:permissions_revokeExecute on pg
 
 BEGIN;
 

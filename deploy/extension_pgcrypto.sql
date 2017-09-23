@@ -1,4 +1,4 @@
--- Deploy evercast:extension_pgcrypto to pg
+-- Deploy rpg:extension_pgcrypto to pg
 
 BEGIN;
 

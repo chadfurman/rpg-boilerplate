@@ -1,4 +1,4 @@
--- Verify evercast:extension_pgcrypto on pg
+-- Verify rpg:extension_pgcrypto on pg
 
 BEGIN;
 

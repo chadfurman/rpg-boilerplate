@@ -1,4 +1,4 @@
--- Revert evercast:table_profile_rbac from pg
+-- Revert rpg:table_profile_rbac from pg
 
 BEGIN;
 

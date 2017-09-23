@@ -1,4 +1,4 @@
--- Deploy evercast_local:grants to pg
+-- Deploy rpg_local:grants to pg
 
 BEGIN;
 

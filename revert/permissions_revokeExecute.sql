@@ -1,4 +1,4 @@
--- Revert evercast:permissions_revokeExecute from pg
+-- Revert rpg:permissions_revokeExecute from pg
 
 BEGIN;
 

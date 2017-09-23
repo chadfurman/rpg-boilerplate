@@ -1,4 +1,4 @@
--- Revert evercast:table_profile_rls from pg
+-- Revert rpg:table_profile_rls from pg
 
 BEGIN;
 

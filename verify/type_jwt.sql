@@ -1,4 +1,4 @@
--- Verify evercast:type_jwt on pg
+-- Verify rpg:type_jwt on pg
 
 BEGIN;
 

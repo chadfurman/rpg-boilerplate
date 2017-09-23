@@ -1,4 +1,4 @@
--- Revert evercast:schema_account from pg
+-- Revert rpg:schema_account from pg
 
 BEGIN;
 

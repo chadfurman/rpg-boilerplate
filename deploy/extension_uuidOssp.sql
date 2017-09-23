@@ -1,4 +1,4 @@
--- Deploy evercast_local:uuid to pg
+-- Deploy rpg_local:uuid to pg
 
 BEGIN;
 

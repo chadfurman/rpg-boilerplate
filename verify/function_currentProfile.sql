@@ -1,4 +1,4 @@
--- Verify evercast:function_currentProfile on pg
+-- Verify rpg:function_currentProfile on pg
 
 BEGIN;
 

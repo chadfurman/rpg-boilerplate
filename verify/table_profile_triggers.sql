@@ -1,4 +1,4 @@
--- Verify evercast:table_profile_triggers on pg
+-- Verify rpg:table_profile_triggers on pg
 
 BEGIN;
 

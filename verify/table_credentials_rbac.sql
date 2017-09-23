@@ -1,4 +1,4 @@
--- Verify evercast:table_credentials_rbac on pg
+-- Verify rpg:table_credentials_rbac on pg
 
 BEGIN;
 

@@ -1,4 +1,4 @@
--- Deploy evercast_local:trigger_setUpdatedAt to pg
+-- Deploy rpg_local:trigger_setUpdatedAt to pg
 
 BEGIN;
 
