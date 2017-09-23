@@ -1,0 +1,42 @@
+@import '../../theme/variables.scss';
+@import '../../theme/mixins.scss';
+
+.login-form {
+  width: 100%;
+
+  .login-form-button {
+    @extend .flex-block;
+    @extend .row;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .buttons-login-form {
+    margin-top: $mobileBlockSize*2;
+    margin-bottom: $mobileBlockSize;
+    @extend .flex-block;
+    flex-direction: column;
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: $smallBreakPoint) {
+  .login-form {
+
+    .content-login-form {
+      margin: 0 ($desktopBlockSize*7);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .logo-login-form {
+      margin: $desktopBlockSize $desktopBlockSize*6 0;
+    }
+
+    .buttons-login-form {
+      margin: $desktopBlockSize 0;
+      width: 100%;
+    }
+  }
+}

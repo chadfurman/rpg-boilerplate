@@ -1,0 +1,53 @@
+@import '../../theme/variables.scss';
+@import '../../theme/mixins.scss';
+
+
+.live-room-drawer {
+  background-color: white;
+  display: flex;
+  align-items: center;
+  width: auto;
+
+  .live-room-drawer-handle {
+    align-self: stretch;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+  }
+
+  .live-room-drawer-open-icon {
+    width: $mobileBlockSize*1.5;
+  }
+
+  .live-room-drawer-content {
+    width: 0;
+    height: 100%;
+    transition: width $baseAnimDuration;
+
+    &.expanded {
+      width: $mobileBlockSize*28;
+    }
+
+    .live-room-drawer-content-menu {
+      width: $mobileBlockSize*28;
+    }
+  }
+}
+
+@media screen and (min-width: $mediumBreakPoint) {
+  .live-room-drawer {
+    .live-room-drawer-open-icon {
+      width: $desktopBlockSize*1.5;
+    }
+
+    .live-room-drawer-content {
+      &.expanded {
+        width: $desktopBlockSize*28;
+      }
+
+      .live-room-drawer-content-menu {
+        width: $desktopBlockSize*28;
+      }
+    }
+  }
+}

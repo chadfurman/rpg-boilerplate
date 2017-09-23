@@ -1,0 +1,52 @@
+$mobileBlockSize: 12px;
+$desktopBlockSize: 16px;
+
+$baseFontSize: $desktopBlockSize;
+
+$smallBreakPoint: 600px;
+$mediumBreakPoint: 960px;
+
+$mobileHeaderHeight: $mobileBlockSize*4;
+$desktopHeaderHeight: $desktopBlockSize*4;
+
+$mobileControlBarHeight: $mobileBlockSize*5;
+$desktopControlBarHeight: $desktopBlockSize*5;
+
+$baseAnimDuration: 0.3s;
+
+$confirmColor: #43A047;
+$noticeColor: #eeaa22;
+$warnColor: #ff7700;
+$denyColor: #DD2C00;
+
+$primaryColor50: #fafafa;
+$primaryColor100: #f5f5f5;
+$primaryColor200: #eeeeee;
+$primaryColor300: #e0e0e0;
+$primaryColor400: #bdbdbd;
+$primaryColor500: #9e9e9e;
+$primaryColor600: #757575;
+$primaryColor700: #616161;
+$primaryColor800: #424242;
+$primaryColor900: #212121;
+$primaryColorA100: #d5d5d5;
+$primaryColorA200: #aaaaaa;
+$primaryColorA400: #303030;
+$primaryColorA700: #616161;
+$primaryColorContrastDefaultColor: 'dark';
+
+$accentColor50: #FCEAE6;
+$accentColor100: #F8CCC4;
+$accentColor200: #F3AD9F;
+$accentColor300: #EF8C79;
+$accentColor400: #EB745D;
+$accentColor500: #E85C41;
+$accentColor600: #D3533B;
+$accentColor700: #BC4A34;
+$accentColor800: #A4412E;
+$accentColor900: #793022;
+$accentColorA100: #F8CCC4;
+$accentColorA200: #E85C41;
+$accentColorA400: #EB745D;
+$accentColorA700: #BC4A34;
+$accentColorContrastDefaultColor: 'light';

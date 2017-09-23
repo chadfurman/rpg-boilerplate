@@ -1,0 +1,12 @@
+exports[`A </NotFound> renders correctly 1`] = `
+<withTheme(AppPrivate)
+  noHeader={true}>
+  <withStyles(Card)
+    className="not-found">
+    <div
+      className="page-title">
+      Page Not Found
+    </div>
+  </withStyles(Card)>
+</withTheme(AppPrivate)>
+`;

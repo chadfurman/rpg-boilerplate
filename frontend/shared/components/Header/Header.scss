@@ -1,0 +1,86 @@
+@import '../../theme/variables.scss';
+@import '../../theme/mixins.scss';
+
+.header {
+  .header-app-bar {
+    .header-toolbar {
+      .header-container {
+        height: $mobileHeaderHeight;
+
+        @extend .flex-block;
+        justify-content: space-between;
+        align-items: center;
+        overflow: hidden;
+
+        .header-logo {
+          display: none;
+        }
+
+        .header-logo-mobile {
+          display: block;
+          line-height: 0;
+          margin: auto $mobileBlockSize;
+          width: $mobileBlockSize*10;
+        }
+
+        .header-title {
+          display: flex;
+        }
+        
+        .header-mobile-search-bar {
+          display: flex;
+        }
+
+        .header-theme-switcher {
+          display: none;
+        }
+
+        .header-avatar {
+          display: none;
+        }
+      }
+    }
+  }
+
+  .hidden {
+    display: none;
+  }
+}
+
+@media screen and (min-width: $smallBreakPoint) {
+  .header {
+    .header-app-bar {
+      .header-toolbar {
+        .header-container {
+          height: $desktopBlockSize*4;
+
+          .header-logo-mobile {
+            display: none;
+          }
+
+          .header-logo {
+            display: block;
+            margin: auto $desktopBlockSize;
+            width: $desktopBlockSize*10;
+          }
+
+          .header-title {
+            display: none;
+          }
+
+          .header-avatar {
+            display: flex;
+          }
+
+          .header-theme-switcher {
+            display: flex;
+          }
+
+          .header-mobile-search-bar {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}

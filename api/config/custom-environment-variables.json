@@ -1,0 +1,10 @@
+{
+  "mongo": {
+    "uri": "DB_URI"
+  },
+  "redis": {
+    "host": "REDIS_HOST",
+    "port": "REDIS_PORT",
+    "prefix": "REDIS_PREFIX"
+  }
+}

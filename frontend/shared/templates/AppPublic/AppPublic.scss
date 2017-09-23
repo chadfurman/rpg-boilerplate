@@ -1,0 +1,93 @@
+@import '../../theme/variables';
+@import '../../theme/mixins';
+
+.app-public {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+
+  .footer-links {
+    display: flex;
+    justify-content: flex-end;
+    margin: 1em auto auto auto;
+
+    .footer-link {
+      margin: 0 1em;
+      text-decoration: none;
+    }
+  }
+
+  .logo {
+    margin: $mobileBlockSize auto 0 auto;
+    width: $mobileBlockSize * 20;
+    height: $mobileBlockSize * 5;
+  }
+
+  .app-public-card {
+    margin: auto $mobileBlockSize;
+    padding: $mobileBlockSize;
+    flex-direction: column;
+    flex: 1;
+    display: flex;
+  }
+
+  .app-public-content {
+    margin: 0 auto;
+  }
+
+  .row {
+    margin: $mobileBlockSize 0;
+    @extend .flex-block;
+    width: 100%;
+
+    &.row-centered {
+      width: auto;
+      margin-left: auto;
+      margin-right: auto;
+      justify-content: center;
+    }
+
+    &.row-thin {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+
+    &.row-narrow {
+      margin-left: 0;
+      margin-right: 0;
+    }
+  }
+}
+
+@media screen and (min-width: $smallBreakPoint) {
+  .app-public {
+
+    .footer-links {
+      width: ($desktopBlockSize*36);
+    }
+
+    .logo {
+      margin: $desktopBlockSize auto 0 auto;
+      width: $desktopBlockSize * 20;
+      height: $desktopBlockSize * 5;
+    }
+
+    .row {
+      margin: $desktopBlockSize 0;
+    }
+
+    .app-public-card {
+      width: ($desktopBlockSize*36);
+      margin: auto auto 0 auto;
+      padding: ($desktopBlockSize) 0 0 0;
+      flex: none;
+    }
+
+    .app-public-content {
+      margin: 0 ($desktopBlockSize*7);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+}

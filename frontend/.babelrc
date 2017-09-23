@@ -1,0 +1,9 @@
+{
+  "presets": [
+    "react-app"
+  ],
+  "plugins": [
+    "relay",
+    "transform-object-rest-spread"
+  ]
+}

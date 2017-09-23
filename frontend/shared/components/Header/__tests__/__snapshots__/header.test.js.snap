@@ -1,0 +1,46 @@
+exports[`A </Header> renders correctly 1`] = `
+<div
+  className="header">
+  <withStyles(AppBar)
+    className="header-app-bar"
+    color="default"
+    position="fixed">
+    <withStyles(Toolbar)
+      className="header-toolbar">
+      <withStyles(IconButton)
+        aria-label="Menu">
+        <pure(Menu) />
+      </withStyles(IconButton)>
+      <div
+        className="header-container">
+        <withTheme(Logo)
+          className="header-logo" />
+        <withTheme(Fade)
+          className="header-fade"
+          enterTransitionDuration={250}
+          in={true}
+          leaveTransitionDuration={150}
+          onEnter={[Function]}
+          onExited={[Function]}>
+          <withStyles(Typography)
+            className="hidden"
+            color="inherit"
+            type="title">
+            Title
+          </withStyles(Typography)>
+        </withTheme(Fade)>
+        <MobileSearchBar
+          className="header-mobile-search-bar"
+          onSearchClosing={[Function]}
+          onSearchOpening={[Function]} />
+        <withTheme(SearchBar)
+          className="header-search-bar" />
+        <ThemeSwitcher
+          className="header-theme-switcher" />
+        <Avatar
+          className="header-avatar" />
+      </div>
+    </withStyles(Toolbar)>
+  </withStyles(AppBar)>
+</div>
+`;

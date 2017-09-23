@@ -1,0 +1,28 @@
+@import '../../theme/variables';
+@import '../../theme/mixins';
+
+.app-private {
+  display: flex;
+  flex: 1;
+
+  .app-private-main {
+    display: flex;
+    flex: 1;
+  }
+
+  .app-private-content {
+    padding-top: $mobileBlockSize*6;
+    padding-bottom: $mobileBlockSize*2;
+    width: 90%;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (min-width: $smallBreakPoint) {
+  .app-private {
+    .app-private-content {
+      padding-top: $desktopBlockSize*6;
+      padding-bottom: $desktopBlockSize*2;
+    }
+  }
+}

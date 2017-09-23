@@ -1,0 +1,43 @@
+@import './variables.scss';
+
+.text-ellipsis {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.flex-block {
+  display: flex;
+  flex: 1;
+}
+
+.page-title {
+  @extend .flex-block;
+  font-size: $mobileBlockSize*3;
+  margin: $mobileBlockSize auto;
+  width: auto;
+  justify-content: center;
+}
+
+@mixin text-wrap($width) {
+  width: $width;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@media screen and (min-width: $smallBreakPoint) {
+  .page-title {
+    font-size: $desktopBlockSize*3;
+    margin: 0 auto $desktopBlockSize auto;
+  }
+
+  .row {
+    margin: $desktopBlockSize/2 $desktopBlockSize;
+  }
+
+  .flex-block-desktop {
+    display: flex;
+    flex: 1;
+  }
+}

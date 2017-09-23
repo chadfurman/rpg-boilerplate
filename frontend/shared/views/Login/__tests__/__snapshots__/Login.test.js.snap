@@ -1,0 +1,147 @@
+exports[`A </Login> renders correctly 1`] = `
+<withTheme(AppPublic)
+  noHeader={true}
+  query={[Function]}>
+  <div
+    className="login">
+    <div
+      className="page-title">
+      Log in
+    </div>
+    <div
+      className="signup row row-centered">
+      Need an Evercast account? 
+      <Link
+        replace={false}
+        to="/signup">
+        Sign up now.
+      </Link>
+    </div>
+    <withStyles(FormControl)
+      className="row">
+      <withStyles(InputLabel)
+        htmlFor="login-input-label email">
+        Email Address
+      </withStyles(InputLabel)>
+      <withStyles(Input)
+        id="email"
+        onChange={[Function]}
+        value="" />
+    </withStyles(FormControl)>
+    <withStyles(FormControl)
+      className="row">
+      <withStyles(InputLabel)
+        htmlFor="password login-input-label">
+        Password
+      </withStyles(InputLabel)>
+      <withStyles(Input)
+        id="password"
+        onChange={[Function]}
+        type="password"
+        value="" />
+    </withStyles(FormControl)>
+    <div
+      className="buttons-login">
+      <withStyles(Button)
+        className="row login-button"
+        color="accent"
+        onClick={[Function]}
+        raised={true}>
+        LOG IN
+      </withStyles(Button)>
+      <div
+        className="row row-centered row-thin">
+        OR
+      </div>
+      <withStyles(Button)
+        className="dark row login-button"
+        color="primary"
+        raised={true}>
+        LOG IN WITH GOOGLE
+      </withStyles(Button)>
+    </div>
+    <div
+      className="forgot row row-centered">
+      <Link
+        replace={false}
+        to="/reset">
+        Forgot password?
+      </Link>
+    </div>
+  </div>
+</withTheme(AppPublic)>
+`;
+
+exports[`A </Login> renders correctly with input set 1`] = `
+<withTheme(AppPublic)
+  noHeader={true}
+  query={[Function]}>
+  <div
+    className="login">
+    <div
+      className="page-title">
+      Log in
+    </div>
+    <div
+      className="signup row row-centered">
+      Need an Evercast account? 
+      <Link
+        replace={false}
+        to="/signup">
+        Sign up now.
+      </Link>
+    </div>
+    <withStyles(FormControl)
+      className="row">
+      <withStyles(InputLabel)
+        htmlFor="login-input-label email">
+        Email Address
+      </withStyles(InputLabel)>
+      <withStyles(Input)
+        id="email"
+        onChange={[Function]}
+        value="test@email.com" />
+    </withStyles(FormControl)>
+    <withStyles(FormControl)
+      className="row">
+      <withStyles(InputLabel)
+        htmlFor="password login-input-label">
+        Password
+      </withStyles(InputLabel)>
+      <withStyles(Input)
+        id="password"
+        onChange={[Function]}
+        type="password"
+        value="test pass" />
+    </withStyles(FormControl)>
+    <div
+      className="buttons-login">
+      <withStyles(Button)
+        className="row login-button"
+        color="accent"
+        onClick={[Function]}
+        raised={true}>
+        LOG IN
+      </withStyles(Button)>
+      <div
+        className="row row-centered row-thin">
+        OR
+      </div>
+      <withStyles(Button)
+        className="dark row login-button"
+        color="primary"
+        raised={true}>
+        LOG IN WITH GOOGLE
+      </withStyles(Button)>
+    </div>
+    <div
+      className="forgot row row-centered">
+      <Link
+        replace={false}
+        to="/reset">
+        Forgot password?
+      </Link>
+    </div>
+  </div>
+</withTheme(AppPublic)>
+`;

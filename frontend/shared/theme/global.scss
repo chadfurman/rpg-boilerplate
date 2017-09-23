@@ -1,0 +1,65 @@
+/* apply a natural box layout model to all elements, but allowing components to change */
+@import './variables.scss';
+
+html {
+  box-sizing: border-box;
+  font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
+  font-weight: 300;
+  font-size: $baseFontSize;
+  color: $primaryColor700;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  transition-property: background, background-color, color;
+  transition-duration: $baseAnimDuration;
+  transition-timing-function: ease-in-out;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+#app {
+  min-height: 100vh;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+
+button {
+  &.dark {
+    background: $primaryColor700;
+    color: white;
+
+    &:hover {
+      background: $primaryColor500;
+    }
+  }
+}
+
+a {
+  color: $accentColor500;
+  text-decoration: none;
+}
+
+input:-webkit-autofill {
+  box-shadow: 0 0 0 1000px white inset;
+}
+
+/*
+.hide {
+  display: none !important;
+}
+
+.invisible {
+  visibility: hidden !important;
+}
+*/
