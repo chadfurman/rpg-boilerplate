@@ -1,5 +1,4 @@
-FROM node:8.4.0-alpine
-MAINTAINER Clevertech DevOps <support@clevertech.biz>
+FROM node:8.5.0-alpine
 
 # Update OS
 RUN apk --no-cache add ca-certificates wget && update-ca-certificates
