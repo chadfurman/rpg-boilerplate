@@ -41,7 +41,8 @@ cd rpg-boilerplate/db && sqitch deploy
 # once migrations finish, ctrl-c docker-compose and re-run:
 cd rpg-boilerplate && docker-compose up 
 
-# navigate to https://localhost:8000/graphiql to verify everything works
+# navigate to https://localhost:3001/graphiql to verify API running
+# navigate to https://localhost:3000/ to verify front-end running
 
 ```
 
