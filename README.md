@@ -31,7 +31,7 @@ docker-compose up
 # after db init, ctrl-c
 
 # deploy migrations to db
-sqitch deploy
+cd db && sqitch deploy
 
 ```
 
@@ -44,14 +44,18 @@ docker-compose up
 
 ## Development
 ### Overview
-The application is divided into two primary directories: `/api` and `/frontend`
+The application is divided into three primary directories: `/api`, `/frontend`, and `/db`
 
-The frontend folder  is further divided into three main parts: 
+The `/api` folder contains the `src` of our GraphQL api -- if you look, you'll notice it simply attaches postgraphile and passes in our config from `api/.env`
+
+the `/db` folder is interesting in that it contains the migrations (i.e. `db/deploy` / `db/revert`) and the sqitch.conf/sqitch.plan files
+
+The frontend folder is further divided into three main parts: 
 * `client` is the code that renders in the browser w/o the SSR server
 * `server` is the code that runs on the SSR server
 * `shared` is the code that runs on both, and is responsible for the UI of the website.
 
-> **NOTE**: Given that the client and server folders are pretty barren and the code therein is somewhat straight-forward, they do not require much explanation.  Take a look and see :)
+> **NOTE**: Given that the frontend client and server folders are pretty barren and the code therein is somewhat straight-forward, they do not require much explanation.  Take a look and see :)
 
 ### Shared Folder
 The shared folder is broken up as follows:
@@ -65,26 +69,25 @@ The shared folder is broken up as follows:
 * `BaseError.js` - An extensible error class
 * `routes.js` - exports an array of imported route files to be matched by the SSR server and iterated over in App.js
 
-### To add a new route
+### How to add a new route
 TODO
 
-### To add a new mutation
+### How to add a new mutation
 TODO
 
-### To add a new component
+### How to add a new component
 TODO
 
-### To add a new view
+### How to add a new view
 TODO
 
-### To add a new migration
+### How to add a new migration
 TODO
 
-### To rework an existing migration
+### How to rework an existing migration
 TODO
 
-### To extend the GraphQL API
+### How to extend the GraphQL API
 TODO
 
-5. 
 ```
