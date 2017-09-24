@@ -15,8 +15,9 @@ allow fast, modular apps.  For more on how they work, check out the respective l
 * [Sqitch](https://github.com/theory/sqitch) (tested on v0.9995)
 
 #### Things to change
-Set the secrets in the docker-compose.yml file
-Re-generate the frontend/certs and api/certs
+Set the secrets in the `docker-compose.yml` file
+Set the secret in `api/.env`
+Re-generate the `frontend/certs` and `api/certs`
 
 #### Installation
 ```
@@ -50,6 +51,14 @@ cd rpg-boilerplate && docker-compose up
 cd rpg-boilerplate
 docker-compose up
 ```
+
+> **Note:** The API and the Frontend SSR server both use HTTPS -- there should be a redirect, but at the moment it's not working.
+> ** MAKE SURE YOU USE HTTPS ** :)
+
+* Frontend: https://localhost:3000
+* API: https://localhost:8080/graphql
+* graphiql: https://localhost:8080/graphiql
+
 
 ## Development
 ### Overview

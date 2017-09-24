@@ -2,11 +2,9 @@ import React from 'react'
 import {createFragmentContainer} from 'react-relay'
 import {graphql} from 'relay-runtime'
 import createReactClass from 'create-react-class'
-'use strict'
-import React from 'react'
 import { HOME_ROUTE_PATH } from '../../routes/home'
 
-import AppPrivate from '../../templates/AppPublic/AppPrivate'
+import AppPrivate from '../../templates/AppPrivate/AppPrivate'
 import './Home.scss'
 
 const Home = createReactClass({

@@ -2,8 +2,6 @@
 
 import { createMuiTheme } from 'material-ui/styles'
 import createPalette from 'material-ui/styles/palette'
-import logoWhite from '../components/Logo/logo-white.svg'
-import logoGrey from '../components/Logo/logo-grey.svg'
 
 import bgLight from './main-bg.jpg'
 import bgDark from './main-bg-dark.jpg'
@@ -52,7 +50,6 @@ export default function createTheme (type = 'light') {
       type: type
     }),
     status: {
-      logo: type === 'light' ? logoGrey : logoWhite,
       background: `url(${type === 'light' ? bgLight : bgDark}) no-repeat center center fixed`,
       badgeTextColor: primaryColor[50],
       badgeBackgroundColor: type === 'light' ? primaryColor[800] : primaryColor[700]
