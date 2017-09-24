@@ -15,9 +15,19 @@ allow fast, modular apps.  For more on how they work, check out the respective l
 * [Sqitch](https://github.com/theory/sqitch) (tested on v0.9995)
 
 #### Things to change
+* copy `rpg-boilerplate/example_docker-compose.yml` to `rpg-boilerplate/docker-compose.yml`
 * Set the secrets in the `docker-compose.yml` file
+* copy `api/example_env` to `api/.env`
 * Set the secret in `api/.env`
-* Re-generate the `frontend/certs` and `api/certs`
+* copy the `frontend/example_certs` and `api/example_certs` to `frontend/certs` and `api/certs` respectively
+* Re-generate the `frontend/certs` and `api/certs`:
+```
+# to regenerate the certs:
+sudo openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout rpg-boilerplate/frontend/certs/cert.key -out rpg-boilerplate/frontend/certs/cert.crt
+sudo openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout rpg-boilerplate/api/certs/cert.key -out rpg-boilerplate/api/certs/cert.crt
+```
+
+> Note: you'll likely want to explore the components and views to implement further changes.  See below for tips on development using this boilerplate
 
 #### Installation
 ```
