@@ -26,7 +26,9 @@ cd rpg-boilerplate
 cd api && yarn install && cd ../frontend && yarn install && cd ../
 
 # start docker to prep db
-docker-compose up
+docker-compose up 
+
+# after db init, ctrl-c
 
 # deploy migrations to db
 sqitch deploy

@@ -1,5 +1,5 @@
 FROM node:8.4.0-alpine
-MAINTAINER Chad Furman <chad@chadfurman.com>
+MAINTAINER Clevertech DevOps <support@clevertech.biz>
 
 # Update OS
 RUN apk --no-cache add ca-certificates wget && update-ca-certificates

@@ -17,5 +17,5 @@ app.use(postgraph(pgConnectionString, pgSchemas, pgOptions))
 
 app.listen(3000, '0.0.0.0', function () {
   console.info('NODE_ENV: ' + process.env.NODE_ENV)
-  Console.info('Postgraph API started.\n')
+  console.info('Postgraph API started.\n')
 })

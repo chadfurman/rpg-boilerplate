@@ -2,7 +2,7 @@
 %project=rpg-boilerplate
 %uri=https://github.com/chadfurman/rpg-boilerplate/
 
-permissions_roles 2017-09-16T23:24:36Z Chad Furman <chad@clevertech.biz> # Default roles for the database.  Postgraphile is expected to login as evercast_app, so the role must be manually altered to 'LOGIN' with a password
+permissions_roles 2017-09-16T23:24:36Z Chad Furman <chad@clevertech.biz> # Default roles for the database.  Postgraphile is expected to login as rpg_app, so the role must be manually altered to 'LOGIN' with a password
 schema_util [permissions_roles] 2017-09-16T23:09:56Z Chad Furman <chad@clevertech.biz> # Collection of general-purpose functions
 extension_pgcrypto [schema_util] 2017-09-18T07:16:42Z Chad Furman <chad@clevertech.biz> # pgcrypto extension
 extension_uuidOssp [schema_util] 2017-09-18T05:06:07Z Chad Furman <chad@clevertech.biz> # uuid-ossp extension is used to generate UUIDs across all of our tables
