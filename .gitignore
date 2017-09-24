@@ -72,4 +72,5 @@ postgres-data
 .vscode
 
 api/schema.gql
+api/schema.json
 Creativ-janus/*
