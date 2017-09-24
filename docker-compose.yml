@@ -27,38 +27,37 @@ services:
     volumes:
       - ./api/.:/opt/app
       - /opt/app/node_modules
-#  nginx-frontend:
-#    image: nginx
-#    depends_on:
-#      - frontend
-#    ports:
-#      - "3000:443"
-#    environment:
-#      NODE_TLS_REJECT_UNAUTHORIZED: 0
-#    volumes:
-#      - ./frontend/frontend.nginx.site:/etc/nginx/conf.d/default.conf
-#      - ./frontend/certs/.:/etc/nginx/certs
-#  frontend:
-#    build: frontend/.
-#    command: yarn start
-#    environment:
-#      NODE_TLS_REJECT_UNAUTHORIZED: 0
-#      NODE_ENV: development
-#      COOKIE_SECRET: ChangeMe1234
-#      API_URL: "https://nginx-api"
-#    ports:
-#      - "0.0.0.0:3030:3000"
-#    volumes:
-#      - ./frontend/.:/opt/frontend
-#      - /opt/frontend/node_modules
+  nginx-frontend:
+    image: nginx
+    depends_on:
+      - frontend
+    ports:
+      - "3000:443"
+    environment:
+      NODE_TLS_REJECT_UNAUTHORIZED: 0
+    volumes:
+      - ./frontend/frontend.nginx.site:/etc/nginx/conf.d/default.conf
+      - ./frontend/certs/.:/etc/nginx/certs
+  frontend:
+    build: frontend/.
+    command: yarn start
+    environment:
+      NODE_TLS_REJECT_UNAUTHORIZED: 0
+      NODE_ENV: development
+      COOKIE_SECRET: ChangeMe1234
+      API_URL: "https://nginx-api"
+    ports:
+      - "0.0.0.0:3030:3000"
+    volumes:
+      - ./frontend/.:/opt/frontend
+      - /opt/frontend/node_modules
   db:
-    image: postgres
+    build: db/.
     environment:
       NODE_TLS_REJECT_UNAUTHORIZED: 0
       POSTGRES_PASSWORD: localdev
       PGDATA: /var/lib/postgresql/data/pgdata
     volumes:
-      - ./postgres-data:/var/lib/postgresql/data/pgdata
-      - ./docker-entrypoint-intidb.d:/docker-entrypoint-intidb.d
+      - ./db/postgres-data:/var/lib/postgresql/data/pgdata
     ports:
       - '8001:5432'
