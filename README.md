@@ -37,18 +37,21 @@ git clone https://github.com/chadfurman/rpg-boilerplate.git
 # enter into the folder
 cd rpg-boilerplate
 
+# enable yarn workspaces
+yarn config set workspaces-experimental true
+
 # install dependencies
-cd api && yarn install && cd ../frontend && yarn install && cd ../
+yarn install
 
 # start docker to prep db
 docker-compose up 
 
 # after db init runs, docker will hang -- this is fine pending the next step
-
 # in a new terminal, deploy migrations to db
 cd rpg-boilerplate/db && sqitch deploy
 
-# once migrations finish, ctrl-c docker-compose and re-run:
+# once migrations finish, ctrl-c docker-compose:
+# you can now re-run when you are ready and everything should work
 cd rpg-boilerplate && docker-compose up 
 
 # navigate to https://localhost:3001/graphiql to verify API running

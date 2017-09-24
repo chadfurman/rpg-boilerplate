@@ -1,0 +1,10 @@
+{
+  "private": true,
+  "name": "rpg-boilerplate",
+  "version": "0.0.1",
+  "workspaces": [
+    "api",
+    "frontend",
+    "db"
+  ]
+}
