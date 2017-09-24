@@ -1,0 +1,7 @@
+NODE_ENV=development
+DB_URI=postgresql://postgres:localdev@db/localdb
+
+
+POSTGRAPHILE_SCHEMAS=account
+POSTGRAPHILE_OPTIONS={"watchPg": true, "jwtSecret": "ChangeMe1234", "graphiql": true, "exportJsonSchemaPath": "./schema.json", "exportGqlSchemaPath": "./schema.gql", "jwtPgTypeIdentifier": "account.jwt", "showErrorStack": true, "pgDefaultRole": "rpg_anonymous"}
+DEBUG=graphile-build:warn

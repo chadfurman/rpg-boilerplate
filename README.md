@@ -2,7 +2,7 @@
 ## Relay, PostgreSQL, Graphile (GraphQL)
 ###### A Modern Frontend and API Boilerplate
 
-This boilerplate provides a starting point for developers, especially the community of [PostgraphQL](https://github.com/calebmer/postgraphql/) developers, to build applications powered by Relay Modern.
+This boilerplate provides a starting point for developers, especially the community of [Postgraphile](https://www.graphile.org/postgraphile) developers, to build applications powered by Relay Modern.
 
 [GraphQL](http://graphql.org/) and [Relay Modern](https://facebook.github.io/relay/docs/relay-modern.html) 
 allow fast, modular apps.  For more on how they work, check out the respective links.
