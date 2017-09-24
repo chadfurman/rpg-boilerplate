@@ -56,8 +56,8 @@ docker-compose up
 > ** MAKE SURE YOU USE HTTPS ** :)
 
 * Frontend: https://localhost:3000
-* API: https://localhost:8080/graphql
-* graphiql: https://localhost:8080/graphiql
+* API: https://localhost:3001/graphql
+* graphiql: https://localhost:3001/graphiql
 
 
 ## Development
