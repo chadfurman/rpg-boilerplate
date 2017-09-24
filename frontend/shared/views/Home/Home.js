@@ -13,11 +13,11 @@ const Home = createReactClass({
   render () {
     return (
       <AppPrivate>
-        You are logged in, {this.props.currentProfile.displayName}
+        <div>You are logged in, {this.props.currentProfile.displayName}</div>
       </AppPrivate>
     )
   }
-}
+})
 
 export default createFragmentContainer(Home,
 graphql`
