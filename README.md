@@ -28,10 +28,15 @@ cd api && yarn install && cd ../frontend && yarn install && cd ../
 # start docker to prep db
 docker-compose up 
 
-# after db init, ctrl-c
+# after db init runs, docker will hang -- this is fine pending the next step
 
-# deploy migrations to db
-cd db && sqitch deploy
+# in a new terminal, deploy migrations to db
+cd rpg-boilerplate/db && sqitch deploy
+
+# once migrations finish, ctrl-c docker-compose and re-run:
+cd rpg-boilerplate && docker-compose up 
+
+# navigate to https://localhost:8000/graphiql to verify everything works
 
 ```
 
