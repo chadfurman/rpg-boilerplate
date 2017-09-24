@@ -53,6 +53,12 @@
 #  authority : any authority ending in ".mckinsey.com"
 #  port      : nothing, or :
 server {
+       listen         80;
+       server_name     default localhost nginx-api api;
+       return         301 https://$server_name$request_uri;
+}
+
+server {
     listen                    443;
     server_name               default localhost nginx-api api;
 
@@ -63,6 +69,9 @@ server {
     ssl_protocols             TLSv1 TLSv1.1 TLSv1.2;
     ssl_ciphers               HIGH:!aNULL:!eNULL:!EXPORT:!CAMELLIA:!DES:!MD5:!PSK:!RC4;
     ssl_prefer_server_ciphers on;
+
+    # add Strict-Transport-Security to prevent man in the middle attacks
+    add_header Strict-Transport-Security "max-age=31536000"; 
 
     sendfile on;
     tcp_nopush on;

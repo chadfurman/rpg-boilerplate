@@ -50,7 +50,7 @@ const LoginForm = createReactClass({
     return (
       <div className='login-form'>
         <div className='page-title'>Log in</div>
-        <div className='signup row row-centered'>Need an Evercast account?&nbsp;<Link to={SIGNUP_ROUTE_PATH}>Sign up now.</Link></div>
+        <div className='signup row row-centered'>Need an account?&nbsp;<Link to={SIGNUP_ROUTE_PATH}>Sign up now.</Link></div>
         <FormControl className='row'>
           <InputLabel htmlFor='input-label email'>
             Email Address

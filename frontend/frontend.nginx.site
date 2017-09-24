@@ -14,8 +14,17 @@
 # Default server configuration
 #
 server {
+      listen         80;
+      server_name    default localhost nginx-frontend frontend;
+      return         301 https://$server_name$request_uri;
+}
+
+server {
     listen                    443;
-    server_name               local.cleverbuild.biz;
+    server_name               default localhost nginx-frontend frontend;
+
+    # add Strict-Transport-Security to prevent man in the middle attacks
+    add_header Strict-Transport-Security "max-age=31536000"; 
 
     ssl_certificate           /etc/nginx/certs/cert.crt;
     ssl_certificate_key       /etc/nginx/certs/cert.key;

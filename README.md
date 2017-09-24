@@ -14,6 +14,10 @@ allow fast, modular apps.  For more on how they work, check out the respective l
 * [Yarn](https://yarnpkg.com) (tested on v0.27.5)
 * [Sqitch](https://github.com/theory/sqitch) (tested on v0.9995)
 
+#### Things to change
+Set the secrets in the docker-compose.yml file
+Re-generate the frontend/certs and api/certs
+
 #### Installation
 ```
 # clone down the code

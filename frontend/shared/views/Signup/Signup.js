@@ -90,7 +90,7 @@ const Signup = createReactClass({
       <AppPublic noHeader query={SIGNUP_ROUTE_QUERY}>
         <div className='signup'>
           <div className='page-title'>Sign up</div>
-          <div className='signup row row-centered'>Already have an Evercast account?&nbsp;<Link to={LOGIN_ROUTE_PATH}>Log in.</Link></div>
+          <div className='signup row row-centered'>Already have an account?&nbsp;<Link to={LOGIN_ROUTE_PATH}>Log in.</Link></div>
           <FormControl required className='row'>
             <InputLabel htmlFor='signup-input-label display-name'>
               Display Name
