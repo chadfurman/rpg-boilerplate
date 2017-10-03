@@ -37,9 +37,6 @@ git clone https://github.com/chadfurman/rpg-boilerplate.git
 # enter into the folder
 cd rpg-boilerplate
 
-# enable yarn workspaces
-yarn config set workspaces-experimental true
-
 # install dependencies
 yarn install
 
