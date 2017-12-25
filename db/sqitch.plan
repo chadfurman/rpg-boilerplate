@@ -2,23 +2,23 @@
 %project=rpg-boilerplate
 %uri=https://github.com/chadfurman/rpg-boilerplate/
 
-1_permissions_roles 2017-09-16T23:24:36Z Chad Furman <chad@clevertech.biz> # Default roles for the database.  Postgraphile is expected to login as rpg_app, so the role must be manually altered to 'LOGIN' with a password
-2_schema_util [1_permissions_roles] 2017-09-16T23:09:56Z Chad Furman <chad@clevertech.biz> # Collection of general-purpose functions
-3_extension_pgcrypto [2_schema_util] 2017-09-18T07:16:42Z Chad Furman <chad@clevertech.biz> # pgcrypto extension
-4_extension_uuidOssp [2_schema_util] 2017-09-18T05:06:07Z Chad Furman <chad@clevertech.biz> # uuid-ossp extension is used to generate UUIDs across all of our tables
-5_permissions_revokeExecute [2_schema_util] 2017-09-16T23:25:02Z Chad Furman <chad@clevertech.biz> # By default, functions should not be able to be executed
-6_schema_account [3_extension_pgcrypto 4_extension_uuidOssp] 2017-09-16T23:07:00Z Chad Furman <chad@clevertech.biz> # account schema, public and private
-7_table_profile [6_schema_account] 2017-09-16T23:10:48Z Chad Furman <chad@clevertech.biz> # Public details about a user, including their display name.  Used to identify accounts across the application.
-8_table_credentials [7_table_profile] 2017-09-16T23:11:34Z Chad Furman <chad@clevertech.biz> # Login credentials which are only accessible to security definer functions
-9_table_credentials_rls [8_table_credentials] 2017-09-16T23:27:11Z Chad Furman <chad@clevertech.biz> # row-level security policies for credentials table
-10_table_credentials_rbac [8_table_credentials] 2017-09-16T23:28:25Z Chad Furman <chad@clevertech.biz> # role-based access control for credentials table
-11_table_profile_rbac [7_table_profile] 2017-09-16T23:29:08Z Chad Furman <chad@clevertech.biz> # role-based access control for profile table
-12_table_profile_rls [7_table_profile] 2017-09-16T23:30:39Z Chad Furman <chad@clevertech.biz> # row-level security policies for profile table
-13_type_jwt [6_schema_account 4_extension_uuidOssp] 2017-09-18T05:06:30Z Chad Furman <chad@clevertech.biz> # Type returned from authenticate function and used to build the JWT
-14_function_authenticate [13_type_jwt 8_table_credentials] 2017-09-18T05:08:37Z Chad Furman <chad@clevertech.biz> # Authenticate function used to sign into the system
-15_function_logout [6_schema_account] 2017-09-18T07:49:46Z Chad Furman <chad@clevertech.biz> # Function which logs a user out and expires all of their tokens.  DANGER: Does not currently expire tokens, only a placeholder.  Remove this warning once fixed.
-16_function_signup [8_table_credentials 3_extension_pgcrypto] 2017-09-18T07:50:41Z Chad Furman <chad@clevertech.biz> # Function which is responsible for creating users in the database.  No other method of creating users is allowed by security policy.
-17_function_currentProfile [7_table_profile] 2017-09-18T08:08:52Z Chad Furman <chad@clevertech.biz> # Function to return the profile of the current user, as specified in the JWT
-18_trigger_setUpdatedAt [2_schema_util] 2017-09-18T08:18:18Z Chad Furman <chad@clevertech.biz> # trigger to set the updated_at time on a table when updated
-19_table_profile_triggers [18_trigger_setUpdatedAt 7_table_profile] 2017-09-18T08:18:22Z Chad Furman <chad@clevertech.biz> # triggers for profile table
-20_table_credentials_triggers [18_trigger_setUpdatedAt 8_table_credentials] 2017-09-18T08:18:50Z Chad Furman <chad@clevertech.biz> # triggers for credentials table
+permissions_roles 2017-09-16T23:24:36Z Chad Furman <chad@clevertech.biz> # Default roles for the database.  Postgraphile is expected to login as rpg_app, so the role must be manually altered to 'LOGIN' with a password
+schema_util [permissions_roles] 2017-09-16T23:09:56Z Chad Furman <chad@clevertech.biz> # Collection of general-purpose functions
+extension_pgcrypto [schema_util] 2017-09-18T07:16:42Z Chad Furman <chad@clevertech.biz> # pgcrypto extension
+extension_uuidOssp [schema_util] 2017-09-18T05:06:07Z Chad Furman <chad@clevertech.biz> # uuid-ossp extension is used to generate UUIDs across all of our tables
+permissions_revokeExecute [schema_util] 2017-09-16T23:25:02Z Chad Furman <chad@clevertech.biz> # By default, functions should not be able to be executed
+schema_account [extension_pgcrypto extension_uuidOssp] 2017-09-16T23:07:00Z Chad Furman <chad@clevertech.biz> # account schema, public and private
+table_profile [schema_account] 2017-09-16T23:10:48Z Chad Furman <chad@clevertech.biz> # Public details about a user, including their display name.  Used to identify accounts across the application.
+table_credentials [table_profile] 2017-09-16T23:11:34Z Chad Furman <chad@clevertech.biz> # Login credentials which are only accessible to security definer functions
+table_credentials_rls [table_credentials] 2017-09-16T23:27:11Z Chad Furman <chad@clevertech.biz> # row-level security policies for credentials table
+table_credentials_rbac [table_credentials] 2017-09-16T23:28:25Z Chad Furman <chad@clevertech.biz> # role-based access control for credentials table
+table_profile_rbac [table_profile] 2017-09-16T23:29:08Z Chad Furman <chad@clevertech.biz> # role-based access control for profile table
+table_profile_rls [table_profile] 2017-09-16T23:30:39Z Chad Furman <chad@clevertech.biz> # row-level security policies for profile table
+type_jwt [schema_account extension_uuidOssp] 2017-09-18T05:06:30Z Chad Furman <chad@clevertech.biz> # Type returned from authenticate function and used to build the JWT
+function_authenticate [type_jwt table_credentials] 2017-09-18T05:08:37Z Chad Furman <chad@clevertech.biz> # Authenticate function used to sign into the system
+function_logout [schema_account] 2017-09-18T07:49:46Z Chad Furman <chad@clevertech.biz> # Function which logs a user out and expires all of their tokens.  DANGER: Does not currently expire tokens, only a placeholder.  Remove this warning once fixed.
+function_signup [table_credentials extension_pgcrypto] 2017-09-18T07:50:41Z Chad Furman <chad@clevertech.biz> # Function which is responsible for creating users in the database.  No other method of creating users is allowed by security policy.
+function_currentProfile [table_profile] 2017-09-18T08:08:52Z Chad Furman <chad@clevertech.biz> # Function to return the profile of the current user, as specified in the JWT
+trigger_setUpdatedAt [schema_util] 2017-09-18T08:18:18Z Chad Furman <chad@clevertech.biz> # trigger to set the updated_at time on a table when updated
+table_profile_triggers [trigger_setUpdatedAt table_profile] 2017-09-18T08:18:22Z Chad Furman <chad@clevertech.biz> # triggers for profile table
+table_credentials_triggers [trigger_setUpdatedAt table_credentials] 2017-09-18T08:18:50Z Chad Furman <chad@clevertech.biz> # triggers for credentials table
