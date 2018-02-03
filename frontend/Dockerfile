@@ -18,7 +18,7 @@ WORKDIR /opt/frontend
 ADD package.json yarn.lock /cache/
 
 # Copy cache contents (if any) from local machine
-#ADD .yarn-cache.tgz /
+ADD .yarn-cache.tgz /
 
 # Install packages + Prepare cache file
 RUN cd /cache \
