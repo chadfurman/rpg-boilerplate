@@ -29,15 +29,6 @@ export function ApiManager () {
       if (window.location.hostname === 'localhost') {
         baseUrl = 'https://localhost:3001'
       }
-      if (window.location.hostname === 'evercast-dev.cleverbuild.biz') {
-        baseUrl = 'https://evercast-dev.cleverbuild.biz/api'
-      }
-      if (window.location.hostname === 'evercast-stage.cleverbuild.biz') {
-        baseUrl = 'https://evercast-stage.cleverbuild.biz/api'
-      }
-      if (window.location.hostname === 'evercast.live') {
-        baseUrl = 'https://evercast.live/api'
-      }
     } else {
       baseUrl = process.env.API_URL
     }
