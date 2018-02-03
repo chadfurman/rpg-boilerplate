@@ -41,7 +41,7 @@ cd rpg-boilerplate
 yarn install
 
 # start docker to prep db
-docker-compose up 
+cd rpg-boilerplate && docker/run.sh
 
 # after db init runs, docker will hang -- this is fine pending the next step
 # in a new terminal, deploy migrations to db
@@ -49,7 +49,7 @@ cd rpg-boilerplate/db && sqitch deploy
 
 # once migrations finish, ctrl-c docker-compose:
 # you can now re-run when you are ready and everything should work
-cd rpg-boilerplate && docker-compose up 
+cd rpg-boilerplate && docker/run.sh
 
 # navigate to https://localhost:3001/graphiql to verify API running
 # navigate to https://localhost:3000/ to verify front-end running
@@ -60,7 +60,7 @@ cd rpg-boilerplate && docker-compose up
 ```
 # Start the app
 cd rpg-boilerplate
-docker-compose up
+docker/run.sh
 ```
 
 > **Note:** The API and the Frontend SSR server both use HTTPS -- there should be a redirect, but at the moment it's not working.
