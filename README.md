@@ -17,7 +17,7 @@ allow fast, modular apps.  For more on how they work, check out the respective l
 #### Things to change
 * copy `rpg-boilerplate/example_docker-compose.yml` to `rpg-boilerplate/docker-compose.yml`
 * Set the secrets in the `docker-compose.yml` file
-* copy `api/example_env` to `api/.env`
+* copy `api/env_example` to `api/.env`
 * Set the secret in `api/.env`
 * copy the `frontend/example_certs` and `api/example_certs` to `frontend/certs` and `api/certs` respectively
 * Re-generate the `frontend/certs` and `api/certs`:
