@@ -1,5 +1,9 @@
 # RPG Boilerplate
 ## Relay, PostgreSQL, Graphile (GraphQL)
+
+#### Danger: This boilerplate is outdated and should only be used for inspiration
+There is an effort underway to revamp the boilerplate, and you can contribute to the new boilerplate here: https://github.com/clevertech/boilerplate/tree/rpg-next
+
 ###### A Modern Frontend and API Boilerplate
 
 This boilerplate provides a starting point for developers, especially the community of [Postgraphile](https://www.graphile.org/postgraphile) developers, to build applications powered by Relay Modern.
