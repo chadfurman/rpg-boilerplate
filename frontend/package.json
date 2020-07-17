@@ -78,7 +78,7 @@
     "jquery": "^3.2.1",
     "jss": "^8.1.0",
     "jss-preset-default": "^3.0.0",
-    "lodash": "^4.17.4",
+    "lodash": "^4.17.19",
     "material-ui": "v1.0.0-beta.5",
     "material-ui-icons": "^1.0.0-beta.10",
     "node-fetch": "^1.7.3",
