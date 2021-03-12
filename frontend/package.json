@@ -44,7 +44,7 @@
     "preload-webpack-plugin": "^2.0.0",
     "promise": "^8.0.1",
     "react-addons-test-utils": "^15.4.2",
-    "react-dev-utils": "^4.0.1",
+    "react-dev-utils": "^11.0.4",
     "react-test-renderer": "^15.4.2",
     "recursive-readdir": "^2.2.1",
     "relay-compiler": "^1.4.0",
