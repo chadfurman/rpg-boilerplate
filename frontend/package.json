@@ -81,7 +81,7 @@
     "lodash": "^4.17.4",
     "material-ui": "v1.0.0-beta.5",
     "material-ui-icons": "^1.0.0-beta.10",
-    "node-fetch": "^1.7.3",
+    "node-fetch": "^3.1.1",
     "prop-types": "^15.5.10",
     "ramda": "^0.24.1",
     "react": "^15.4.2",
